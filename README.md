@@ -2,19 +2,19 @@
 
 This repository contains the code, API calls and 
 
-Overall Structure:
+# Overall Structure:
 - Main solution, with dockerfile which can be used to spin up a docker image for the API specifically
 - The actual web api project, which hosts the authentication and transaction endpoints, following REST principles
 - The unit test solution, which tests the transaction controller
 - A small, demo app which brings it all together and demonstrates the working
 
-How to run it:
+# How to run it:
 This solution targets .NET CORE 3.1. In order to run it, you need dotnet core installed, and the CLI available. 
 https://dotnet.microsoft.com/download/dotnet-core/3.1
 
 Once this is done, you can clone this repository, so you have a copy of it. Go into the main working folder of the repository, and run the command "dotnet run". This will now have the API running, and waiting for requests
 
-How to test the operations:
+# How to test the operations:
 1. Once you have latest on the solution, load it up in Visual Studio (I used 2019 community edition while developing, but should work in 2017 onwards as long as dotnetcore is installed)
 2. Run the API project - you can either run it from the solution, by right-clicking, and selecting "Run Project", or you can use the aforementioned dotnetcore CLI with the command "dotnet run", executed within the main project folder (this is wherever interview_suraj.csproj is located)
 3. Now the API is run - it can be called with a tool like Postman, or making use of the Bank_Demo app provided
@@ -33,16 +33,16 @@ This is the safest way to store secrets, instead of committing it to the repo, a
 In order to run the unit tests, go to the UnitTests folder, and run dotnet test. You will need the nunit library: 
 https://github.com/nunit/docs/wiki/.NET-Core-and-.NET-Standard
 
-Caveats, Notes and Misc: T
+# Caveats, Notes and Misc: T
 - This solution makes use of an in-memory db for ease of testing. However, there is a commented line that shows how easy it would be to change to a different persistence layer. All this would need is for us to initialize the SQLLite DB (or other db)as shown here: https://docs.microsoft.com/en-us/ef/core/get-started/?tabs=netcore-cli
 - This app is very bare bones, and just used to illustrate a proof of concept. In a more normal application, we'd have separate views, and user directed inputs before performing these calls, instead of just performing them in sequence. In addition, we would probably associate access tokens and refresh tokens with the user, along with their status, instead of getting them every time the user accessed the app
 
-Extensions/Improvements to API:
+# Extensions/Improvements to API:
 - Use of a better persistence layer
 - More extensive documentation 
 - Making the API calls async so they can respond to long running operations better
 
-Docker:
+# Docker:
 (Content heavily sourced from .net and Docker official docs :) )
 This solution also contains a docker infrastructure which you can use to build images and create a container specifically for the Web API project. Here is what you need to do:
 1) Go to the main project directory. 
