@@ -1,0 +1,34 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview_Suraj", "Interview_Suraj\Interview_Suraj.csproj", "{60DB0381-462D-46D3-B85F-B28518502B11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{F334280F-B507-47DC-A174-3EF62D1C2C70}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E55735AD-C191-463C-9C67-CC8F6921F0F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06181CC9-2646-45A3-B423-46F7B5AEBBE4}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60DB0381-462D-46D3-B85F-B28518502B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DB0381-462D-46D3-B85F-B28518502B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DB0381-462D-46D3-B85F-B28518502B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DB0381-462D-46D3-B85F-B28518502B11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F334280F-B507-47DC-A174-3EF62D1C2C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F334280F-B507-47DC-A174-3EF62D1C2C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F334280F-B507-47DC-A174-3EF62D1C2C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F334280F-B507-47DC-A174-3EF62D1C2C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E55735AD-C191-463C-9C67-CC8F6921F0F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E55735AD-C191-463C-9C67-CC8F6921F0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E55735AD-C191-463C-9C67-CC8F6921F0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E55735AD-C191-463C-9C67-CC8F6921F0F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
