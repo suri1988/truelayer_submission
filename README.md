@@ -1,7 +1,3 @@
-# Explanation of Solution
-
-This repository contains the code, API calls and 
-
 # Overall Structure:
 - Main solution, with dockerfile which can be used to spin up a docker image for the API specifically
 - The actual web api project, which hosts the authentication and transaction endpoints, following REST principles
