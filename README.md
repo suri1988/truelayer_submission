@@ -29,7 +29,7 @@ This is the safest way to store secrets, instead of committing it to the repo, a
 In order to run the unit tests, go to the UnitTests folder, and run dotnet test. You will need the nunit library: 
 https://github.com/nunit/docs/wiki/.NET-Core-and-.NET-Standard
 
-# Caveats, Notes and Misc: T
+# Caveats, Notes and Misc: 
 - This solution makes use of an in-memory db for ease of testing. However, there is a commented line that shows how easy it would be to change to a different persistence layer. All this would need is for us to initialize the SQLLite DB (or other db)as shown here: https://docs.microsoft.com/en-us/ef/core/get-started/?tabs=netcore-cli
 - This app is very bare bones, and just used to illustrate a proof of concept. In a more normal application, we'd have separate views, and user directed inputs before performing these calls, instead of just performing them in sequence. In addition, we would probably associate access tokens and refresh tokens with the user, along with their status, instead of getting them every time the user accessed the app
 
