@@ -36,7 +36,7 @@ namespace Interview_Suraj.Controllers
                 return NotFound(new ApiException(response.StatusCode, response.ErrorMessage));
             }
 
-            return Ok(response.ResponseUri.ToString());
+            return Redirect(response.ResponseUri.ToString());
         }
 
         [HttpGet("AccessToken")]

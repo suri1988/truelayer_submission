@@ -23,7 +23,7 @@ namespace Interview_Suraj.Repositories
             request.AddParameter("grant_type", "authorization_code");
             request.AddParameter("client_id", _configuration["clientid"]);
             request.AddParameter("client_secret", _configuration["clientsecret"]);
-            request.AddParameter("redirect_uri", "https://console.truelayer-sandbox.com/redirect-page");
+            request.AddParameter("redirect_uri", "https://localhost:5003/Home/Callback");
             request.AddParameter("code", code);
             var response = client.Execute(request);
 
@@ -32,7 +32,7 @@ namespace Interview_Suraj.Repositories
 
         public IRestResponse GetAuthenticationUrl()
         {
-            var client = new RestClient("https://auth.truelayer-sandbox.com/?response_type=code&client_id="+ _configuration["clientid"] +"&scope=info%20accounts%20balance%20cards%20transactions%20direct_debits%20standing_orders%20offline_access&redirect_uri=https://console.truelayer-sandbox.com/redirect-page&providers=uk-ob-all%20uk-oauth-all%20uk-cs-mock");
+            var client = new RestClient("https://auth.truelayer-sandbox.com/?response_type=code&client_id="+ _configuration["clientid"] + "&scope=info%20accounts%20balance%20cards%20transactions%20direct_debits%20standing_orders%20offline_access&redirect_uri=https://localhost:5003/Home/Callback&providers=uk-ob-all%20uk-oauth-all%20uk-cs-mock");
             var request = new RestRequest(Method.GET);
             request.AddHeader("Content-Type", "application/json");
             var response = client.Execute(request);

@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Bank_Demo.Models.ViewModels.AccountTransactionViewModel
+
+<h1>Account Transactions</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Account Number
+            </th>
+            <th>
+                TransactionId
+            </th>
+            <th>
+                Amount
+            </th>
+            <th>
+                Transaction Category
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AccountTransactions)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<h1>Account Transactions</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Category
+            </th>
+            <th>
+                Average
+            </th>
+            <th>
+                Minimum
+            </th>
+            <th>
+                Maximum
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.UserTransactionMetrics)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionCategory)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AverageTransaction)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MinimumTransaction)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaximumTransaction)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
