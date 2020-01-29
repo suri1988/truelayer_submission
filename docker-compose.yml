@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  interview_suraj:
+    image: $suri1988/interviewsuraj
+    build:
+      context: .
+      dockerfile: Interview_Suraj/Dockerfile
