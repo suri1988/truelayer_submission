@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview_Suraj", "Interview_Suraj\Interview_Suraj.csproj", "{60DB0381-462D-46D3-B85F-B28518502B11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interview_suraj", "Interview_Suraj\Interview_Suraj.csproj", "{60DB0381-462D-46D3-B85F-B28518502B11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{F334280F-B507-47DC-A174-3EF62D1C2C70}"
 EndProject
