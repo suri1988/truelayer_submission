@@ -63,3 +63,26 @@ Extensions/Improvements to API:
 - Use of a better persistence layer
 - More extensive documentation
 - Making the API calls async so they can respond to long running operations better
+
+Docker:
+(Content heavily sourced from .net and Docker official docs :) )
+This solution also contains a docker infrastructure which you can use to build images and create containers. Here is what you need to do:
+1) Go to the main project directory. 
+Run: dotnet publish -c Release
+This creates the necessary dlls
+
+2) Go one level up, to the solution directory, which includes a Dockerfile
+docker build -t final -f Dockerfile .
+This will restore packages, build the solution, and have everything needed for our image
+
+3) Run docker images to see a list of images installed
+
+4) Run docker create final to create a container that can then be easily distributed among the team
+
+5) Run docker start {container_name} to start the actual container
+
+6) If you don't want to create a fresh image from scratch, I have prepared a remote image:
+docker pull suri1988/interviewsuraj
+
+
+
