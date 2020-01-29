@@ -12,7 +12,7 @@ Once this is done, you can clone this repository, so you have a copy of it. Go i
 
 # How to test the operations:
 1. Once you have latest on the solution, load it up in Visual Studio (I used 2019 community edition while developing, but should work in 2017 onwards as long as dotnetcore is installed)
-2. Run the API project - you can either run it from the solution, by right-clicking, and selecting "Run Project", or you can use the aforementioned dotnetcore CLI with the command "dotnet run", executed within the main project folder (this is wherever interview_suraj.csproj is located)
+2. Run the API project - you can either run it from the solution, by right-clicking, and selecting "Run Project", or you can use the aforementioned dotnetcore CLI with the command "dotnet run", executed within the main project folder (this is wherever interview_suraj.csproj is located). If you run it from VS, you will see the Swagger API homepage, which shows a quick snapshot of the API calls available.
 3. Now the API is run - it can be called with a tool like Postman, or making use of the Bank_Demo app provided
 4. To use the Bank_Demo app, simply right click on that project, and click on run. It opens up a bare bones app, and follows the following workflow
   - Makes a call to the auth url established in sandbox. 
