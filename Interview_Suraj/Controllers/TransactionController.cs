@@ -29,6 +29,11 @@ namespace Interview_Suraj.Controllers
             _transactionRepository = transactionRepository;
         }
 
+        /// <summary>
+        /// Returns transactions across accounts, for a single user
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult<List<AccountTransaction>> Get(string token)
         {
@@ -74,6 +79,11 @@ namespace Interview_Suraj.Controllers
             return Ok(accountTransactions);
         }
 
+        /// <summary>
+        /// Returns a summary of user transactions, across accounts, per transaction category
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
         [HttpGet("UserMetrics")]
         public ActionResult<List<UserTransactionMetrics>> UserMetrics(string token)
         {

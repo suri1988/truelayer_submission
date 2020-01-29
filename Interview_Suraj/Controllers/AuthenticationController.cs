@@ -26,7 +26,10 @@ namespace Interview_Suraj.Controllers
             _authenticationRepository = authenticationRepository;
         }
 
-        //returns the login url hosted by truelayer that the application redirects to
+        /// <summary>
+        /// Returns the true layer sandbox login auth url, which the user has to authorize
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("AuthUrl")]
         public ActionResult AuthUrl()
         {
@@ -39,6 +42,11 @@ namespace Interview_Suraj.Controllers
             return Redirect(response.ResponseUri.ToString());
         }
 
+        /// <summary>
+        /// Returns the access token and refresh token
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
         [HttpGet("AccessToken")]
         public ActionResult AccessToken(string code)
         {
@@ -52,6 +60,11 @@ namespace Interview_Suraj.Controllers
             return Ok(accessTokenResponse);
         }
 
+        /// <summary>
+        /// Returns a refresh token, which will replace the old refresh token
+        /// </summary>
+        /// <param name="refreshToken"></param>
+        /// <returns></returns>
         [HttpGet("RenewToken")]
         public ActionResult RenewToken(string refreshToken)
         {
